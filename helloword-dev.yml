@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: helloword
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
+  instance:
+    preferIpAddress: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    
+    
+name: dousongbo
